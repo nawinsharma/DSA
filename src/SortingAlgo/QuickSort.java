@@ -1,3 +1,4 @@
+package SortingAlgo;
 public class QuickSort {
 
     //  Divide and conquire

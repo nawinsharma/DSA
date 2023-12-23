@@ -1,3 +1,4 @@
+package SortingAlgo;
 public class MergeSort {
 
     //  Divide and conquer

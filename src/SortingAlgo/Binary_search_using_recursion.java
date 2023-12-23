@@ -1,3 +1,4 @@
+package SortingAlgo;
 public class Binary_search_using_recursion {
     public static void main(String[] args) {
 

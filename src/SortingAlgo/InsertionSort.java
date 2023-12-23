@@ -1,3 +1,4 @@
+package SortingAlgo;
 public class InsertionSort {
     public static void main(String[] args) {
         int arr[] = {1,3,5,2,9,8,7,6};
