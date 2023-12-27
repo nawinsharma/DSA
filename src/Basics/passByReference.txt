@@ -1,0 +1,3 @@
+ pass by reference he means that there is no any way by which we can pass the primitive data types as reference in java. For example in C++ we had & and * operators by which we could pass the memory address of any variable we want ( even primitive variables like int, char, float etc ) and we can always achieve pass by reference but in java there are no such & and * operators. 
+
+But in java we do have certain reference variables like classes, arrays. Since they are already a reference variable passing them through function might look like a pass by reference but that is because the variable name already is a reference to data in heap memory. So DO NOT BE CONFUSED
