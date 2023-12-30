@@ -43,7 +43,7 @@ public class NestedSwitch {
         // break;
         // }
 
-        // better way to write
+        // better way to write the switch case in a new way
         switch (empId) {
             case 1 -> System.out.println("Nawin");
             case 2 -> System.out.println("John");
