@@ -12,6 +12,7 @@ public class Sum {
          System.out.println("Enter second number: ");
         int b = sc.nextInt();
         int result = addition(a, b);
+        // passing the value of the reference variable a,b to addition function
         System.out.println("Sum is : "+result);
 
     }
