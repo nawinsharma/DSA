@@ -11,11 +11,11 @@ public class Sum {
         int a = sc.nextInt();
          System.out.println("Enter second number: ");
         int b = sc.nextInt();
-        int result = Sum(a, b);
+        int result = addition(a, b);
         System.out.println("Sum is : "+result);
 
     }
-    public static int Sum(int a, int b){
-
+    public static int addition(int a, int b){
+        return a+b;
     }
 }
