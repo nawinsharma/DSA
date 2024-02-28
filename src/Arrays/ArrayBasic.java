@@ -19,5 +19,17 @@ public class ArrayBasic {
 
         int [] id; //decaration of array, id is getting defined in the stack
         id = new int[5]; // initialization :actually here object is being created in the memory (heap)
+        // System.out.println(id[2]);//0
+
+        String[] arr = new String[4];
+        // System.out.println(arr[0]);// null , null is a literal
+        // by default, reference variables points to null
+
+        String str = null;
+        // int num = null // error we can not assign to primitive types
+        //None in python
+
+
+
     }
 }
