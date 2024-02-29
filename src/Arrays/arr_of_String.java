@@ -13,5 +13,10 @@ public class arr_of_String {
 
         }
         System.out.print(Arrays.toString(str));
+
+        // we can modify
+        str[0] = "hen";// it changes the original one
+        System.out.print(Arrays.toString(str));
+
     }
 }
