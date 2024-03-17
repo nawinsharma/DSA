@@ -1,31 +1,37 @@
 package BinarySearch;
 
 // https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/
+
+// https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/
 public class StartingEndingPositionOfTargetElement {
     public static void main(String[] args) {
         int[] nums = { 5, 7, 7, 8, 8, 10 };
-        System.out.println(searchRange(nums, 8));
+        StartingEndingPositionOfTargetElement solution = new StartingEndingPositionOfTargetElement();
+        int[] result = solution.searchRange(nums, 8);
+        System.out.println("[" + result[0] + ", " + result[1] + "]");
     }
 
-    public static int[] searchRange(int[] nums, int target) {
+    public int[] searchRange(int[] nums, int target) {
 
-        int[] ans = {-1, -1};
+        int[] ans = { -1, -1 };
         // check for first occurrence if target first
         ans[0] = search(nums, target, true);
         if (ans[0] != -1) {
             ans[1] = search(nums, target, false);
         }
+        // time complexity is logN+logN which is logN only
         return ans;
     }
 
     // this function just returns the index value of target
-    static int search(int[] nums, int target, boolean findStartIndex) {
+    int search(int[] nums, int target, boolean findStartIndex) {
         int ans = -1;
         int start = 0;
         int end = nums.length - 1;
-        while(start <= end) {
+        while (start <= end) {
             // find the middle element
-//            int mid = (start + end) / 2; // might be possible that (start + end) exceeds the range of int in java
+            // int mid = (start + end) / 2; // might be possible that (start + end) exceeds
+            // the range of int in java
             int mid = start + (end - start) / 2;
 
             if (target < nums[mid]) {
@@ -45,6 +51,7 @@ public class StartingEndingPositionOfTargetElement {
         return ans;
     }
 }
+
 // Given an array of integers nums sorted in non-decreasing order, find the
 // starting and ending position of a given target value.
 
