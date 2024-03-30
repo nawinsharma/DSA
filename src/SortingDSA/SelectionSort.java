@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class SelectionSort {
     public static void main(String[] args) {
         int[] arr = { 4, 3, 8, 6, 5, 3, 9, 0 };
-        selection(arr);
+        selection_sort(arr);
         System.out.println(Arrays.toString(arr));
     }
 
@@ -32,5 +32,20 @@ public class SelectionSort {
             }
         }
         return max;
+    }
+
+    static void selection_sort(int[] arr) {
+        // time complexity = o(n^2)
+        for (int i = 0; i < arr.length - 1; i++) {
+            int smallest = i;
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[smallest] > arr[j]) {
+                    smallest = j;
+                }
+            }
+            int temp = arr[smallest];
+            arr[smallest] = arr[i];
+            arr[i] = temp;
+        }
     }
 }
