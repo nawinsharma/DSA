@@ -3,10 +3,10 @@ package Recursion;
 public class BinarySearch {
     public static void main(String[] args) {
         int[] nums = { 1, 3, 5, 6, 7, 10 };
-        System.out.println(BS(nums, 10 , 0, nums.length - 1));
+        System.out.println(search(nums, 10 , 0, nums.length - 1));
     }
 
-    static int BS(int[] arr, int target, int start, int end) {
+    static int search(int[] arr, int target, int start, int end) {
         if (start > end) {
             return -1;
         }
@@ -15,9 +15,9 @@ public class BinarySearch {
             return mid;
         }
         if (arr[mid] > target) {
-            return BS(arr, target, start, mid - 1);
+            return search(arr, target, start, mid - 1);
         } else {
-            return BS(arr, target, mid + 1, end);
+            return search(arr, target, mid + 1, end);
         }
 
     }
