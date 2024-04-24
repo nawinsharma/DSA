@@ -11,7 +11,10 @@ public class Find {
         // System.out.println(list);
 
         ArrayList<Integer> list = new ArrayList<>();
-        ArrayList<Integer> ans = findAllIndexPro(nums, 4, 0, list);
+        // ArrayList<Integer> ans = findAllIndexPro(nums, 4, 0, list);
+        // System.out.println(ans);
+
+        ArrayList<Integer> ans = findAll(nums, 4, 0);
         System.out.println(ans);
     }
 
@@ -65,5 +68,21 @@ public class Find {
         }
         return findAllIndexPro(arr, target, index + 1, list);
 
+    }
+
+    // without arrayList in the arguments
+    static ArrayList<Integer> findAll(int[] arr, int target, int index) {
+        ArrayList<Integer> list = new ArrayList<>();
+        if (index == arr.length) {
+            return list;
+        }
+        // this will contain the answer of the function call only
+
+        if (arr[index] == target) {
+            list.add(index);
+        }
+        ArrayList<Integer> ansFromBelowFnCall = findAll(arr, target, index + 1);
+        list.addAll(ansFromBelowFnCall);
+        return list;
     }
 }
