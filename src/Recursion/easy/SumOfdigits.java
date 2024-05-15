@@ -10,7 +10,6 @@ public class SumOfdigits {
         if (n == 0) {
             return 0;
         }
-        int sum = ( n % 10) + sum(n / 10);
-        return sum;
+        return ( n % 10) + sum(n / 10);
     }
 }
