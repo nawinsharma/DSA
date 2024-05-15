@@ -25,7 +25,7 @@ public class Reverse {
 
     }
 
-    // f(n, arg) = rem*10^(arg-1)+f(n/10,arg-1)
+    // f(n, arg) = rem*10^(arg-1)+f(n/10,arg-1) 
     private static int helper(int n, int digits) {
         if (n % 10 == n) {
             return n;
