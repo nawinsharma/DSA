@@ -45,6 +45,5 @@ public class Output {
         // Strings created using string literals may be stored in the string pool for
         // optimization.
         // Strings explicitly created with new are always stored on the heap.
-
     }
 }
