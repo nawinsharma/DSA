@@ -8,7 +8,6 @@ public class Find {
         System.out.println(findIndex(nums, 4, 0));
         System.out.println(findIndexLast(nums, 7, nums.length - 1));
         // findAllIndex(nums, 4, 0);
-        // System.out.println(list);
 
         ArrayList<Integer> list = new ArrayList<>();
         // ArrayList<Integer> ans = findAllIndexPro(nums, 4, 0, list);
