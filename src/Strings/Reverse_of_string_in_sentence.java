@@ -15,7 +15,6 @@ public class Reverse_of_string_in_sentence {
 
         }
         return out + str[0];
-
     }
 
 }
