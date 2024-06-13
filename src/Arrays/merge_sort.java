@@ -11,17 +11,18 @@ public class merge_sort {
     }
 
     static void merge(int[] num1, int m, int[] num2, int n) {
-        int[] combinedArray = new int[m + n];
-        for (int i = 0; i < m; i++) {
-            combinedArray[i] = num1[i];
-        }
+        // int[] combinedArray = new int[m + n];
+        // for (int i = 0; i < m; i++) {
+        //     combinedArray[i] = num1[i];
+        // }
         for (int j = 0; j < n; j++) {
-            combinedArray[m + j] = num2[j];
+            num1[m + j] = num2[j];
         }
-        Arrays.sort(combinedArray);
-        for (int i = 0; i < combinedArray.length; i++) {
-            num1[i] = combinedArray[i];
-        }
+        Arrays.sort(num1);
+        
+        // for (int i = 0; i < combinedArray.length; i++) {
+        //     num1[i] = combinedArray[i];
+        // }
         // num1[] = {4,5,7,0,0}
         // num2[] = {1,10}
         // combinedArray = {4,5,7,1,10} -> {1,4,5,7,10}
