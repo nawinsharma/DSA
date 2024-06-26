@@ -5,6 +5,7 @@ public class ValidParenthethis {
         System.out.println(isValid("[]"));
 
     }
+    //stack uses
 
     public static boolean isValid(String s) {
         // create a stack to store opening parentheses
