@@ -6,7 +6,6 @@ public class ValidParenthethis {
 
     }
     public static boolean isValid(String s) {
-        // create a stack to store opening parentheses
         Stack<Character> stack = new Stack<>();
 
         // loop through the string
@@ -28,17 +27,14 @@ public class ValidParenthethis {
                 // pop the top element from the stack
                 char top = stack.pop();
                 // if the current character and the top element from the stack don't match,
-                // return false
                 if (c == ')' && top != '(' || c == '}' && top != '{' || c == ']' && top != '[') {
                     return false;
                 }
             }
         }
-        // if the stack is not empty at the end, return false
         if (!stack.isEmpty()) {
             return false;
         }
-        // return true
         return true;
     }
 }
