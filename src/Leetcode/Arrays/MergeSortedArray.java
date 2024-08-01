@@ -7,7 +7,7 @@ public class MergeSortedArray {
     public static void main(String[] args) {
         int[] nums1 = {4, 5, 7, 0, 0};
         int[] nums2 = {1, 10};
-        merge1(nums1, 3, nums2, 2);
+        optimizedMerge(nums1, 3, nums2, 2);
     }
 
     public static void merge(int[] nums1, int m, int[] nums2, int n) {
@@ -62,5 +62,21 @@ public class MergeSortedArray {
         //              p   r
         //      nums2 = [1,10]
         //                  q 
+        int p = m - 1;
+        int q = n - 1;
+        int r = nums1.length - 1;
+        while (r >= 0) {
+            if (q < 0) {
+                break;
+            }
+            if (p >= 0 && nums1[p] >= nums2[q]) {
+                nums1[r--] = nums1[p--];
+            } else {
+                nums1[r--] = nums2[q--];
+
+            }
+        }
+        System.out.println(Arrays.toString(nums1));
+
     }
 }
