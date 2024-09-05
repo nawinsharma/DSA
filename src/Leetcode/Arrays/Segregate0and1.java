@@ -9,6 +9,7 @@ public class Segregate0and1 {
         segregeate(arr);
     }
 
+    // time complexity: O(N)
     public static void segregeate(int[] nums) {
         if (nums == null || nums.length <= 1) {
             // Array is empty or has only one element, no need to process
