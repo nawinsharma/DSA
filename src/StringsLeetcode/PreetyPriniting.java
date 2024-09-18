@@ -1,4 +1,4 @@
-package Strings;
+package StringsLeetcode;
 
 public class PreetyPriniting {
     public static void main(String[] args) {

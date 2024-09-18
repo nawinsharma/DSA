@@ -1,4 +1,4 @@
-package Strings;
+package StringsLeetcode;
 
 public class Reverse_of_string_in_sentence {
     public static void main(String[] args) {

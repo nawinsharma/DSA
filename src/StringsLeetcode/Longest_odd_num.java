@@ -1,4 +1,4 @@
-package Strings;
+package StringsLeetcode;
 
 public class Longest_odd_num {
     public static void main(String[] args) {

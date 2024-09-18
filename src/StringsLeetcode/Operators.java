@@ -1,4 +1,4 @@
-package Strings;
+package StringsLeetcode;
 
 import java.util.ArrayList;
 
