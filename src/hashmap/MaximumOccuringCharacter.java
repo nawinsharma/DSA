@@ -1,12 +1,15 @@
 package hashmap;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class MaximumOccuringCharacter {
+
     public static void main(String[] args) {
         String str = "abcaabbbc";
         System.out.println(maxOccuringChar(str));
     }
+
     static char maxOccuringChar(String str) {
         HashMap<Character, Integer> map = new HashMap<>();
         for (int i = 0; i < str.length(); i++) {
