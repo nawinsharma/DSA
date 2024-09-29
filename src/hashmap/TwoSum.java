@@ -21,12 +21,13 @@ public class TwoSum {
         }
         return new int[]{};
     }
-    public static int[] Hashmap(int[] arr, int target){
-        Map <Integer, Integer> map = new HashMap<>(); 
-        for(int i = 0 ; i< arr.length; i++){
+
+    public static int[] Hashmap(int[] arr, int target) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < arr.length; i++) {
             int x = arr[i];
             int y = target - x;
-            if(map.containsKey(y)){  // o(n) // if(map.get(y)!= null)
+            if (map.containsKey(y)) {  // o(n) // if(map.get(y)!= null)
                 return new int[]{i, map.get(y)};
             }
             map.put(x, i);
