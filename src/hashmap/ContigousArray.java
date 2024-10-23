@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class ContigousArray {
 
     public static void main(String[] args) {
-        int[] nums = {0, 1, 1, 0};
+        int[] nums = {0, 1, 1, 0, 1, 1, 1, 0};
         int ans = Contigous(nums);
         System.out.println(ans);
     }
@@ -30,7 +30,8 @@ public class ContigousArray {
             }
 
             if (counts.containsKey(count)) {
-                max_length = Math.max(count, i - counts.get(count));
+                max_length = Math.max(max_length, i - counts.get(count));
+
 //If count is already in counts: It means we’ve seen this balance before, so the elements between the previous index where this balance was first seen and the current index i form a balanced subarray.
 // Calculate the length of this subarray as i - counts.get(count).
 // Update max_length if this length is longer than the previous longest balanced subarray.
@@ -39,13 +40,12 @@ public class ContigousArray {
                 counts.put(count, i);
             }
         }
-
         return max_length;
     }
 }
 
 // Example Walkthrough
-// Given nums = {0, 1, 1, 0}:
+// Given nums = {0, 1, 1, 0}:+-
 // Starting with count = 0.
 // Index 0: nums[0] = 0 → count = -1. Add (-1, 0) to counts.
 // Index 1: nums[1] = 1 → count = 0. count = 0 was seen before at index -1, so the length is 1 - (-1) = 2.
