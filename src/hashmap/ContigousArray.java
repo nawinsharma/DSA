@@ -44,22 +44,13 @@ public class ContigousArray {
     }
 }
 
-
-
 // Example Walkthrough
 // Given nums = {0, 1, 1, 0}:
-
 // Starting with count = 0.
 // Index 0: nums[0] = 0 → count = -1. Add (-1, 0) to counts.
 // Index 1: nums[1] = 1 → count = 0. count = 0 was seen before at index -1, so the length is 1 - (-1) = 2.
 // Index 2: nums[2] = 1 → count = 1. Add (1, 2) to counts.
 // Index 3: nums[3] = 0 → count = 0. count = 0 was seen before at index -1, so the length is 3 - (-1) = 4.
 // The longest balanced subarray is {0, 1, 1, 0}, with a length of 4.
-
 // This solution efficiently finds the longest balanced subarray in a single pass with O(n) time complexity, using the HashMap for fast lookups.
-
-
-
-
-
 
