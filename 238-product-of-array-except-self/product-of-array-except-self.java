@@ -17,16 +17,17 @@ class Solution {
         // }
         // return ans;
 
-        int[] arr = new int[nums.length];
-        int right = 1, left = 1;
-        for (int i = 0; i < nums.length; i++) {
-            arr[i] = left;
-            left *= nums[i];
+        int n = nums.length;
+        int[] ans = new int[n];
+        int prefix = 1; int suffix = 1;
+        for(int i = 0; i < n; i++){
+            ans[i] = prefix;
+            prefix *= nums[i];
         }
-        for (int i = nums.length - 1; i >= 0; i--) {
-            arr[i] *= right;
-            right *= nums[i];
+        for(int i = n -1; i >= 0; i--){
+            ans[i] *= suffix;
+            suffix *= nums[i];
         }
-        return arr;
+        return ans;
     }
 }
