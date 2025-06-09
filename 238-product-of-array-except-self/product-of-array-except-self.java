@@ -17,15 +17,15 @@ class Solution {
         // }
         // return ans;
 
-        int[] ans = new int[nums.length];
-        int prefix = 1; int suffix = 1;
-        for(int i = 0; i < nums.length; i++){
-            ans[i] = prefix;
-            prefix *= nums[i];
+       int[] ans = new int[nums.length];
+        int right = 1, left = 1;
+        for (int i = 0; i < nums.length; i++) {
+            ans[i] = left;
+            left *= nums[i];
         }
-        for(int i = nums.length -1; i >= 0; i--){
-            ans[i] *= suffix;
-            suffix *= nums[i];
+        for (int i = nums.length - 1; i >= 0; i--) {
+            ans[i] *= right;
+            right *= nums[i];
         }
         return ans;
     }
