@@ -1,4 +1,5 @@
 class Solution {
+    // Kadane's Algorithm
     public int maxSubArray(int[] nums) {
         int max_so_far = nums[0];
         int current_sum = nums[0];
